@@ -7,14 +7,15 @@ class fibonacci
 
 public:
     fibonacci();
-    unsigned long long get_result(short n);
-    double get_time();
+    long long get_result(short n);
+    long double get_time();
 
 private:
-    double op_time = 0;
-    unsigned long long r;
+    long double op_time = 0;
+    long long r;
+    bool if_error = false;
 
-    unsigned long long solve(short n);
+    long long solve(short n, std::chrono::time_point<std::chrono::steady_clock> x);
 };
 
 #endif // FIBONACCI_H
