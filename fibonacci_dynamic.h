@@ -12,8 +12,6 @@ public:
     long double get_time();
 
 private:
-//    typedef std::ratio<1l, 1000000000000l> pico;
-//    typedef std::chrono::duration<long long, pico> picoseconds;
 
     long double op_time = 0;
     unsigned long long r=0;

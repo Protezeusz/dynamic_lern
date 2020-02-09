@@ -2,16 +2,10 @@
 
 fibonacci::fibonacci()
 {
-
 }
-
-//'std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long long int, std::ratio<1ll, 1000000000ll> > >'
-//'std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long long int, std::ratio<1ll, 1000000000ll> > >')
-//'std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long long int, std::ratio<1ll, 1000000000ll> > >&)'
 
 long long fibonacci::solve(short n, std::chrono::time_point<std::chrono::steady_clock> x)
 {
-
     auto x_time = std::chrono::steady_clock::now();
     if(std::chrono::duration_cast<std::chrono::seconds>(x_time - x).count()<10)
         if(n<=1)
@@ -20,9 +14,8 @@ long long fibonacci::solve(short n, std::chrono::time_point<std::chrono::steady_
             return solve(n-2,x)+solve(n-1,x);
     else
         if_error = true;
-        return 0;
 
-
+    return 0;
 }
 
 long long fibonacci::get_result(short n)

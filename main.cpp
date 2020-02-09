@@ -1,14 +1,9 @@
-//#include <QCoreApplication>
 #include "fibonacci.h"
 #include "fibonacci_dynamic.h"
 #include <iostream>
-#include <stdlib.h>
 
-//int main(int argc, char *argv[])
 int main()
 {
-    //QCoreApplication a(argc, argv);
-
     short x=1, n;
     fibonacci f;
     fibonacci_dynamic fd;
@@ -25,8 +20,6 @@ int main()
         system("CLS");
 
         std:: cout << "Fibonacci " << n;
-        //wAtek zwracający none i outof time po x czasie nie uzyskania wyniku,
-        //lub uzykany wynik, po x czasie umiera
 
         std:: cout << "\nrecursion result: " << f.get_result(n);
         std:: cout << "\ntime: " << f.get_time() << "ns";
@@ -36,6 +29,5 @@ int main()
         std:: cout << "\n";
     }
 
-
-    return 0; //a.exec();
+    return 0;
 }
