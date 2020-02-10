@@ -3,11 +3,11 @@
 #include <chrono>
 #include <vector>
 
-class fibonacci_dynamic
+class Fibonacci_dynamic
 {
 
 public:
-    fibonacci_dynamic();
+    Fibonacci_dynamic();
     unsigned long long get_result(short n);
     long double get_time();
 

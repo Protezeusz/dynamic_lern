@@ -1,10 +1,10 @@
 #include "fibonacci_dynamic.h"
 
-fibonacci_dynamic::fibonacci_dynamic()
+Fibonacci_dynamic::Fibonacci_dynamic()
 {
 }
 
-unsigned long long fibonacci_dynamic::solve(short n)
+unsigned long long Fibonacci_dynamic::solve(short n)
 {
     if(n>=v.size())
         get_new(n);
@@ -12,20 +12,20 @@ unsigned long long fibonacci_dynamic::solve(short n)
     return v[n];
 }
 
-void fibonacci_dynamic::clear()
+void Fibonacci_dynamic::clear()
 {
     v.clear();
     v.push_back(0);
     v.push_back(1);
 }
 
-void fibonacci_dynamic::get_new(unsigned long long n)
+void Fibonacci_dynamic::get_new(unsigned long long n)
 {
     for(unsigned long long i = v.size(); i<=n; i++)
         v.push_back(v[i-2]+v[i-1]);
 }
 
-unsigned long long fibonacci_dynamic::get_result(short n)
+unsigned long long Fibonacci_dynamic::get_result(short n)
 {
     clear();
 
@@ -37,7 +37,7 @@ unsigned long long fibonacci_dynamic::get_result(short n)
     return r;
 }
 
-long double fibonacci_dynamic::get_time()
+long double Fibonacci_dynamic::get_time()
 {
     return op_time;
 }
